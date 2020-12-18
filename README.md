@@ -25,4 +25,8 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Credits
 
+![GitHub License](https://img.shields.io/badge/made%20by-%40alexbachicha-orange)
+
 ## License
+
+![GitHub License](https://img.shields.io/npm/l/express)
