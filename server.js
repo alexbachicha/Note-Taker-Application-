@@ -1,6 +1,5 @@
 // DEPENDENCIES
 const express = require("express");
-const fs = require("fs");
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server. Tells node that we are creating an "express" server
@@ -14,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // What folder the browser can see
-app.use("/assets", express.static("./assets"));
+app.use("/public", express.static("./public"));
 
 // ROUTER
 // The below points our server to a series of "route" files. These routes give our server a "map" of how to respond when users visit or request data from various URLs.
