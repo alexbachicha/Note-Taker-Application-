@@ -44,7 +44,7 @@ Within a business context; for users that need to keep track of a lot of informa
 
 Below is an example of what the product looks like:
 
-![Demo](develop/assets/demo.png)
+![Demo](/assets/demo.png)
 
 ## Credits
 
