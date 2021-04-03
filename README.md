@@ -42,7 +42,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Usage
 
-![Demo](public/assets/demo.png)
+![Demo](/public/assets/demo.png)
 
 ## License
 
