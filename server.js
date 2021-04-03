@@ -1,26 +1,17 @@
-// DEPENDENCIES
 const express = require("express");
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
 
-// EXPRESS CONFIGURATION
-// This sets up the basic properties for our express server. Tells node that we are creating an "express" server
-var app = express();
+// Initialize app and create port
+const app = express();
+const PORT = process.env.PORT || 8080;
 
-// PORT setup
-var PORT = process.env.PORT || 8080;
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
+// Set up body parsing, static, and route middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
 
-// What folder the browser can see
-app.use("/public", express.static("./public"));
-
-// ROUTER
-// The below points our server to a series of "route" files. These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-require("./routes/apiroute")(app);
-require("./routes/htmlroute")(app);
-
-// LISTENER
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
-});
+// Start the server on the port
+app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
