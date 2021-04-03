@@ -7,6 +7,8 @@
 
 The Note Taker is an application that can be used to write, save, and delete notes. This application uses an express backend to save and retrieve note data from a JSON file.
 
+View the Note Taker Application on [Heroku]()
+
 ## Table of Contents 
 
 * [User Story](#userstory)
